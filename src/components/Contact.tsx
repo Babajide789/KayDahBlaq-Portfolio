@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Instagram, Twitter, Facebook, Send } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';

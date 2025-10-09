@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, MapPin, Camera, Users } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+// import { ImageWithFallback } from './figma/ImageWithFallback';
 
 
 const AboutSection = () => {
@@ -46,11 +46,11 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <div className="relative overflow-hidden rounded-lg">
-              <ImageWithFallback
+              {/* <ImageWithFallback
                 src="https://images.unsplash.com/photo-1621788455628-957e51d2f4e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWwlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTk4ODgxMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Alexandra Hayes Portrait"
                 className="w-full h-[600px] object-cover"
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
           </motion.div>

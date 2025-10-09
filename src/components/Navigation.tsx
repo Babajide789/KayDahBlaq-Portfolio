@@ -1,5 +1,7 @@
+"use client"
+
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 import { Menu, X, Instagram, Twitter, Facebook } from 'lucide-react';
 import { Button } from './ui/button';
 

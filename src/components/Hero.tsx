@@ -1,6 +1,6 @@
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 import { ArrowDown } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+// import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const HeroSection = () => {
   const scrollToPortfolio = () => {
@@ -14,11 +14,11 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <ImageWithFallback
+        {/* <ImageWithFallback
           src="https://images.unsplash.com/photo-1621788455628-957e51d2f4e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWwlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTk4ODgxMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Alexandra Hayes"
           className="w-full h-full object-cover"
-        />
+        /> */}
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
 

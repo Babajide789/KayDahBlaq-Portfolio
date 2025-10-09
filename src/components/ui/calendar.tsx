@@ -59,19 +59,10 @@ function Calendar({
         day_hidden: "invisible",
         ...classNames,
       }}
-      components={{
-        IconLeft: ({
-          className,
-          ...props
-        }: React.HTMLAttributes<SVGSVGElement>) => (
-          <ChevronLeft className={cn("size-4", className)} {...props} />
-        ),
-        IconRight: ({
-          className,
-          ...props
-        }: React.HTMLAttributes<SVGSVGElement>) => (
-          <ChevronRight className={cn("size-4", className)} {...props} />
-        ),
+      icons={{
+        // 👇 the correct property for navigation icons in v9+
+        left: ({ ...props }) => <ChevronLeft className="size-4" {...props} />,
+        right: ({ ...props }) => <ChevronRight className="size-4" {...props} />,
       }}
       {...props}
     />

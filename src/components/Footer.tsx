@@ -1,4 +1,6 @@
-import { motion } from 'motion/react';
+"use client"
+
+import { motion } from "framer-motion";
 import { Heart, ArrowUp } from 'lucide-react';
 import { Button } from './ui/button';
 
