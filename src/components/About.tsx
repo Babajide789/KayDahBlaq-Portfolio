@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Award, MapPin, Camera, Users } from 'lucide-react';
-// import { Card, CardContent } from './ui/card';
+import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+
 
 const AboutSection = () => {
   const stats = [
@@ -152,3 +153,5 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
+

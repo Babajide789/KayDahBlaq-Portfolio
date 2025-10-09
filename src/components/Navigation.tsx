@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X, Instagram, Twitter, Facebook } from 'lucide-react';
-// import { Button } from './ui/button';
+import { Button } from './ui/button';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

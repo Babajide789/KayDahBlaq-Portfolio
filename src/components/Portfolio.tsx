@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn } from 'lucide-react';
-// import { Dialog, DialogContent } from './ui/dialog';
-// import { Button } from './ui/button';
+import { Dialog, DialogContent } from './ui/dialog';
+import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const PortfolioSection = () => {
