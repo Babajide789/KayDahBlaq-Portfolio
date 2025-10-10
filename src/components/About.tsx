@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion";
 import { Award, MapPin, Camera, Users } from 'lucide-react';
 import { Card, CardContent } from './ui/card';

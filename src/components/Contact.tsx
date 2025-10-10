@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Instagram, Twitter, Facebook, Send } from 'lucide-react';
 import { Button } from './ui/button';
