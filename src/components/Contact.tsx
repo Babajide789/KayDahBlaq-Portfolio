@@ -88,7 +88,7 @@ const ContactSection = () => {
           </h2>
           <div className="w-24 h-0.5 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to collaborate? Let's create something beautiful together. I'm always excited to work on new projects and campaigns.
+            Ready to collaborate? Let&apos;s create something beautiful together. I&apos;m always excited to work on new projects and campaigns.
           </p>
         </motion.div>
 
@@ -244,9 +244,9 @@ const ContactSection = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <h4 className="text-xl font-medium mb-2">Let's Work Together</h4>
+              <h4 className="text-xl font-medium mb-2">Let&apos;s Work Together</h4>
               <p className="text-muted-foreground mb-4">
-                I'm always looking for exciting new projects and collaborations. Whether you're a brand, photographer, or creative agency, I'd love to hear from you.
+                I&apos;m always looking for exciting new projects and collaborations. Whether you&apos;re a brand, photographer, or creative agency, I&apos;d love to hear from you.
               </p>
               <div className="text-sm text-primary font-medium">
                 Available for worldwide projects

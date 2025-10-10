@@ -71,16 +71,17 @@ const AboutSection = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                With over 8 years in the fashion industry, I've had the privilege of working with some of the world's most prestigious brands and photographers. My journey began in New York, and has taken me across the globe from Paris fashion weeks to commercial campaigns in Tokyo.
+                With over 8 years in the fashion industry, I&apos;ve had the privilege of working with some of the world&apos;s most prestigious brands and photographers. My journey began in New York, and has taken me across the globe from Paris fashion weeks to commercial campaigns in Tokyo.
               </p>
-              
+
               <p>
                 I specialize in high fashion, commercial, and editorial photography, bringing a unique blend of elegance, versatility, and professionalism to every project. My goal is to not just model clothing, but to tell stories and evoke emotions through imagery.
               </p>
-              
+
               <p>
-                Beyond modeling, I'm passionate about sustainable fashion and use my platform to advocate for environmental consciousness in the industry. I believe fashion should be beautiful, responsible, and accessible.
+                Beyond modeling, I&apos;m passionate about sustainable fashion and use my platform to advocate for environmental consciousness in the industry. I believe fashion should be beautiful, responsible, and accessible.
               </p>
+
             </div>
 
             <div className="space-y-2">
