@@ -7,9 +7,19 @@ import { Dialog, DialogContent } from './ui/dialog';
 import { Button } from './ui/button';
 // import { ImageWithFallback } from './figma/ImageWithFallback';
 
+
+type PortfolioItem = {
+  id: number;
+  category: 'fashion' | 'commercial' | 'editorial' | 'beauty';
+  image: string;
+  title: string;
+  description: string;
+};
+
+
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [selectedImage, setSelectedImage] = useState<any>(null);
+  const [selectedImage, setSelectedImage] = useState<PortfolioItem | null>(null);
 
   const categories = [
     { id: 'all', label: 'All Work' },
@@ -19,7 +29,7 @@ const PortfolioSection = () => {
     { id: 'beauty', label: 'Beauty' }
   ];
 
-  const portfolioItems = [
+  const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
       category: 'fashion',
