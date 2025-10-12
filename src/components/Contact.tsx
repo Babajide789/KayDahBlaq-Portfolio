@@ -21,20 +21,21 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@alexandrahayes.com',
-      href: 'mailto:hello@alexandrahayes.com'
+      value: 'kaydahblaq@gmail.com',
+      href: 'mailto:kaydahblaq@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+234 708 082 2869',
+      href: 'tel:+2347080822869'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'New York, NY',
+      value: 'LAGOS, NIGERIA',
       href: '#'
+      // INSRT LINK TO MAP OR REMOVE
     }
   ];
 

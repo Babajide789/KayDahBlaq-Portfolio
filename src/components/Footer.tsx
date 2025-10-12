@@ -24,7 +24,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-light tracking-wider mb-2">
-              ALEXANDRA HAYES
+              KAYDAH BLAQ
             </h3>
             <p className="text-primary-foreground/80 text-sm">
               International Model & Influencer
@@ -47,7 +47,7 @@ const Footer = () => {
               >
                 <Heart size={14} className="text-red-400" fill="currentColor" />
               </motion.span>
-              <span>by Alexandra Hayes</span>
+              <span>by Kaydah Blaq</span>
             </p>
             <p className="text-primary-foreground/60 text-xs mt-1">
               All rights reserved

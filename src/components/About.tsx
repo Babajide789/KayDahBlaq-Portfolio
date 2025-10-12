@@ -8,18 +8,17 @@ import { Card, CardContent } from './ui/card';
 
 const AboutSection = () => {
   const stats = [
-    { icon: Camera, number: '500+', label: 'Photoshoots' },
+    { icon: Camera, number: '200+', label: 'Photoshoots' },
     { icon: Award, number: '50+', label: 'Campaigns' },
     { icon: MapPin, number: '25+', label: 'Countries' },
     { icon: Users, number: '2M+', label: 'Followers' }
   ];
 
   const achievements = [
-    'Featured in Vogue, Elle, Harper\'s Bazaar',
+    'Featured in GO CRZY, NARC, TRANCE',
     'Campaign ambassador for luxury brands',
     'International runway model',
     'Social media influencer',
-    'Fashion week regular in Paris, Milan, NYC'
   ];
 
   return (
@@ -71,7 +70,7 @@ const AboutSection = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                With over 8 years in the fashion industry, I&apos;ve had the privilege of working with some of the world&apos;s most prestigious brands and photographers. My journey began in New York, and has taken me across the globe from Paris fashion weeks to commercial campaigns in Tokyo.
+                With over 2 years in the fashion industry, I&apos;ve had the privilege of working with some of the world&apos;s most prestigious brands and photographers. My journey began in Lagos, Nigeria, and has taken me across the state from Lagos fashion weeks to commercial campaigns in Abuja.
               </p>
 
               <p>

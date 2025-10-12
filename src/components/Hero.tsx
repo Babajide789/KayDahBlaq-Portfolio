@@ -37,7 +37,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            ALEXANDRA
+            KAYDAH
           </motion.h1>
           <motion.h2
             className="text-3xl md:text-5xl font-light mb-6 tracking-widest"
@@ -45,7 +45,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            HAYES
+            BLAQ
           </motion.h2>
           <motion.div
             className="w-24 h-0.5 bg-white mx-auto mb-8"

@@ -47,7 +47,7 @@ const Navigation = () => {
             className="text-2xl font-medium"
             whileHover={{ scale: 1.05 }}
           >
-            ALEXANDRA HAYES
+            <b>KAYDAHBLAQ</b>
           </motion.div>
 
           {/* Desktop Navigation */}
