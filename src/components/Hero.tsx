@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from 'lucide-react';
 // import { ImageWithFallback } from './figma/ImageWithFallback';
+import Image from 'next/image';
 
 const HeroSection = () => {
   const scrollToPortfolio = () => {
@@ -21,6 +22,14 @@ const HeroSection = () => {
           alt="Alexandra Hayes"
           className="w-full h-full object-cover"
         /> */}
+        <Image
+          src="/polaroids/POLAROIDS PIC 4.jpg"
+          alt="Kaydah Blaq Poloaroid Pic"
+          className="w-full h-full object-cover"
+          fill
+          priority
+          quality={100}
+        />
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
