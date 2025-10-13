@@ -34,6 +34,7 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-6xl font-light mb-6 tracking-wide">
             ABOUT ME
           </h2>
+
           <div className="w-24 h-0.5 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -47,7 +48,6 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <div className="relative overflow-hidden rounded-lg">
-              
               <Image
                 src="/TRANCE/TRANCE 3.jpg"
                 alt="ABOUT PHOTO"
@@ -91,6 +91,7 @@ const AboutSection = () => {
 
             <div className="space-y-2">
               <h4 className="text-xl font-medium mb-4">Career Highlights</h4>
+
               <ul className="space-y-2">
                 {achievements.map((achievement, index) => (
                   <motion.li
@@ -135,6 +136,7 @@ const AboutSection = () => {
                     >
                       <IconComponent className="w-6 h-6 text-primary" />
                     </motion.div>
+                    
                     <div>
                       <motion.div
                         className="text-3xl font-light text-primary mb-1"
@@ -145,6 +147,7 @@ const AboutSection = () => {
                       >
                         {stat.number}
                       </motion.div>
+
                       <div className="text-sm text-muted-foreground tracking-wider">
                         {stat.label}
                       </div>
