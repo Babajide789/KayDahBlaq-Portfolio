@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { Menu, X, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { FaTiktok, FaInstagram } from "react-icons/fa"; // Font Awesome icons
+import { FaXTwitter } from "react-icons/fa6";
+
 import { Button } from './ui/button';
 
 const Navigation = () => {
@@ -64,28 +67,37 @@ const Navigation = () => {
             ))}
             <div className="flex items-center space-x-4 ml-8">
               <motion.a
-                href="#"
+                href="https://www.instagram.com/kaydahblaq_?igsh=MXEwaGJ3bjRxZnQxeg=="
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
-                <Instagram size={20} />
+
+                <FaInstagram size={20} />
               </motion.a>
+              
               <motion.a
-                href="#"
+                href="https://x.com/kaydahblaq999?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
-                <Twitter size={20} />
+                <FaXTwitter size={20}/>
               </motion.a>
+              
               <motion.a
-                href="#"
+                href="https://www.tiktok.com/@kaydahblaq?_t=ZS-90VwC7hdwR8&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
-                <Facebook size={20} />
+                <FaTiktok size={20} />
               </motion.a>
             </div>
           </div>
@@ -121,28 +133,35 @@ const Navigation = () => {
             ))}
             <div className="flex items-center space-x-4 pt-4">
               <motion.a
-                href="#"
+                href="https://www.instagram.com/kaydahblaq_?igsh=MXEwaGJ3bjRxZnQxeg=="
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
-                <Instagram size={20} />
+                <FaInstagram size={20} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://x.com/kaydahblaq999?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
-                <Twitter size={20} />
+              
+                <FaXTwitter size={20}/>
               </motion.a>
               <motion.a
-                href="#"
+                href="https://www.tiktok.com/@kaydahblaq?_t=ZS-90VwC7hdwR8&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
-                <Facebook size={20} />
+                <FaTiktok size={20} />
               </motion.a>
             </div>
           </div>

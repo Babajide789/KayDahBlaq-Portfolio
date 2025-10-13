@@ -13,6 +13,7 @@ type PortfolioItem = {
   image: string; // ✅ fixed (previously src)
   title: string;
   description: string;
+  type: "image" | "video";
 };
 
 const PortfolioSection = () => {
@@ -35,6 +36,7 @@ const PortfolioSection = () => {
       image: "/polaroids/POLAROIDS PIC 4.jpg",
       title: "Runway Collection 2024",
       description: "Paris Fashion Week - Haute Couture",
+      type: "image",
     },
     {
       id: 2,
@@ -43,6 +45,7 @@ const PortfolioSection = () => {
       title: "Luxury Brand Campaign",
       description:
         "Global advertising campaign for premium lifestyle brand",
+      type: "image",
     },
     {
       id: 3,
@@ -51,28 +54,32 @@ const PortfolioSection = () => {
       title: "Vogue Editorial",
       description:
         "Featured editorial spread in international fashion magazine",
+      type: "image",
     },
     {
       id: 4,
-      category: "videos",
-      image: "/PERS FIT/PERS FIT PIC 2.jpg",
+      category: "fashion",
+      image:"/NARC/NARC CAP 2.jpg",
       title: "Beauty Campaign",
       description: "Cosmetics brand beauty photography",
+      type: "image",
     },
     {
       id: 5,
       category: "fashion",
-      image: "/NARC/NARC CAP 2.jpg",
+      image: "/PERS FIT/PERS FIT PIC 2.jpg",
       title: "Luxury Fashion",
       description:
         "High-end fashion photography for designer collection",
+      type: "image",
     },
     {
       id: 6,
       category: "commercial",
-      image: "/TRANCE/TRANCE 1.jpg",
+      image: "/GYPSY/GYPSY 1.jpg",
       title: "Studio Campaign",
       description: "Professional studio photography for brand campaign",
+      type: "image",
     },
     {
       id: 7,
@@ -81,6 +88,8 @@ const PortfolioSection = () => {
       title: "Fashion Portrait",
       description:
         "Editorial portrait for fashion magazine feature",
+
+      type: "image",
     },
     {
       id: 8,
@@ -88,13 +97,15 @@ const PortfolioSection = () => {
       image: "/VIDS/VIDEO SHOOT 2.mp4",
       title: "Classic Beauty",
       description: "Timeless black and white beauty photography",
+      type: "video",
     },
     {
       id: 9,
       category: "fashion",
-      image: "/GYPSY/GYPSY 1.jpg",
+      image: "/NARC/NARC PHOTO 4.jpg",
       title: "Runway Collection 2024",
       description: "Paris Fashion Week - Haute Couture",
+      type: "image",
     },
     {
       id: 10,
@@ -103,14 +114,16 @@ const PortfolioSection = () => {
       title: "Luxury Brand Campaign",
       description:
         "Global advertising campaign for premium lifestyle brand",
+      type: "image",
     },
     {
       id: 11,
       category: "editorial",
-      image: "/TRANCE/TRANCE 3.jpg",
+      image: "/TRANCE/TRANCE 2.jpg",
       title: "Vogue Editorial",
       description:
         "Featured editorial spread in international fashion magazine",
+      type: "image",
     },
     {
       id: 12,
@@ -118,6 +131,7 @@ const PortfolioSection = () => {
       image: "/VIDS/VIDEO SHOOT 1.mp4",
       title: "Beauty Campaign",
       description: "Cosmetics brand beauty photography",
+      type: "video",
     },
     // {
     //   id: 13,
@@ -209,12 +223,22 @@ const PortfolioSection = () => {
                 whileHover={{ y: -10 }}
               >
                 {/* ✅ Added next/image for optimization */}
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {item.type === "video" ? (
+                  <video
+                    src={item.image}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    autoPlay
+                    loop
+                    muted
+                  />
+                  ) : (
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-center text-white p-4">
                     <ZoomIn size={24} className="mx-auto mb-2" />
@@ -246,15 +270,22 @@ const PortfolioSection = () => {
                 <X size={20} />
               </Button>
 
-              {/* ✅ Modal image */}
-              <Image
-                src={selectedImage.image}
-                alt={selectedImage.title}
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-lg"
-              />
-
+              {selectedImage.type === "video" ? (
+                <video
+                  src={selectedImage.image}
+                  className="w-full h-auto rounded-lg"
+                  controls
+                  autoPlay
+                />
+                ) : (
+                  <Image
+                    src={selectedImage.image}
+                    alt={selectedImage.title}
+                    width={1000}
+                    height={700}
+                    className="w-full h-auto rounded-lg"
+                  />
+              )}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
                 <h3 className="text-2xl font-medium mb-2">
                   {selectedImage.title}
