@@ -1,100 +1,158 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ZoomIn } from 'lucide-react';
-import { Dialog, DialogContent } from './ui/dialog';
-import { Button } from './ui/button';
-// import { ImageWithFallback } from './figma/ImageWithFallback';
-
+import { X, ZoomIn } from "lucide-react";
+import { Dialog, DialogContent } from "./ui/dialog";
+import { Button } from "./ui/button";
+import Image from "next/image";
 
 type PortfolioItem = {
   id: number;
-  category: 'fashion' | 'commercial' | 'editorial' | 'beauty';
-  image: string;
+  category: "fashion" | "commercial" | "editorial" | "videos";
+  image: string; // ✅ fixed (previously src)
   title: string;
   description: string;
 };
 
-
 const PortfolioSection = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState("all");
   const [selectedImage, setSelectedImage] = useState<PortfolioItem | null>(null);
 
   const categories = [
-    { id: 'all', label: 'All Work' },
-    { id: 'fashion', label: 'Fashion' },
-    { id: 'commercial', label: 'Commercial' },
-    { id: 'editorial', label: 'Editorial' },
-    { id: 'beauty', label: 'Beauty' }
+    { id: "all", label: "All Work" },
+    { id: "fashion", label: "Fashion" },
+    { id: "commercial", label: "Commercial" },
+    { id: "editorial", label: "Editorial" },
+    { id: "videos", label: "Videos" },
   ];
 
+  // ✅ all paths use `image` instead of `src`
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
-      category: 'fashion',
-      image: 'https://images.unsplash.com/photo-1613456478740-b4ac434ef548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHklMjBydW53YXl8ZW58MXx8fHwxNzU5ODg4MTE3fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Runway Collection 2024',
-      description: 'Paris Fashion Week - Haute Couture'
+      category: "fashion",
+      image: "/polaroids/POLAROIDS PIC 4.jpg",
+      title: "Runway Collection 2024",
+      description: "Paris Fashion Week - Haute Couture",
     },
     {
       id: 2,
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1635255485316-0fb82952f19a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tZXJjaWFsJTIwbW9kZWwlMjBoZWFkc2hvdHxlbnwxfHx8fDE3NTk4ODgxMTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Luxury Brand Campaign',
-      description: 'Global advertising campaign for premium lifestyle brand'
+      category: "commercial",
+      image: "/NARC/NARC PHOTO 1.jpg",
+      title: "Luxury Brand Campaign",
+      description:
+        "Global advertising campaign for premium lifestyle brand",
     },
     {
       id: 3,
-      category: 'editorial',
-      image: 'https://images.unsplash.com/photo-1639244151653-7807947de5a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZGl0b3JpYWwlMjBmYXNoaW9uJTIwbWFnYXppbmV8ZW58MXx8fHwxNzU5ODM4NTg1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Vogue Editorial',
-      description: 'Featured editorial spread in international fashion magazine'
+      category: "editorial",
+      image: "/GO CRZY/GO CRZY GREEN 1.jpg",
+      title: "Vogue Editorial",
+      description:
+        "Featured editorial spread in international fashion magazine",
     },
     {
       id: 4,
-      category: 'beauty',
-      image: 'https://images.unsplash.com/photo-1713442861325-8ac2038d3cb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBtb2RlbCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1OTgxMTI5N3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Beauty Campaign',
-      description: 'Cosmetics brand beauty photography'
+      category: "videos",
+      image: "/PERS FIT/PERS FIT PIC 2.jpg",
+      title: "Beauty Campaign",
+      description: "Cosmetics brand beauty photography",
     },
     {
       id: 5,
-      category: 'fashion',
-      image: 'https://images.unsplash.com/photo-1567777301743-3b7ef158aadf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmYXNoaW9uJTIwbW9kZWx8ZW58MXx8fHwxNzU5ODI2NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Luxury Fashion',
-      description: 'High-end fashion photography for designer collection'
+      category: "fashion",
+      image: "/NARC/NARC CAP 2.jpg",
+      title: "Luxury Fashion",
+      description:
+        "High-end fashion photography for designer collection",
     },
     {
       id: 6,
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1743856641639-7fa1857d85ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2RlbCUyMHBob3Rvc2hvb3QlMjBzdHVkaW98ZW58MXx8fHwxNzU5ODExNjk3fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Studio Campaign',
-      description: 'Professional studio photography for brand campaign'
+      category: "commercial",
+      image: "/TRANCE/TRANCE 1.jpg",
+      title: "Studio Campaign",
+      description: "Professional studio photography for brand campaign",
     },
     {
       id: 7,
-      category: 'editorial',
-      image: 'https://images.unsplash.com/photo-1706824250412-42b8ba877abb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtb2RlbCUyMGhlYWRzaG90fGVufDF8fHx8MTc1OTg4ODEyMXww&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Fashion Portrait',
-      description: 'Editorial portrait for fashion magazine feature'
+      category: "editorial",
+      image: "/de loca/DE LOCA 2.jpg",
+      title: "Fashion Portrait",
+      description:
+        "Editorial portrait for fashion magazine feature",
     },
     {
       id: 8,
-      category: 'beauty',
-      image: 'https://images.unsplash.com/photo-1643077286854-6ada321e9b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHklMjBibGFjayUyMHdoaXRlfGVufDF8fHx8MTc1OTg4ODEyMXww&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Classic Beauty',
-      description: 'Timeless black and white beauty photography'
-    }
+      category: "videos",
+      image: "/VIDS/VIDEO SHOOT 2.mp4",
+      title: "Classic Beauty",
+      description: "Timeless black and white beauty photography",
+    },
+    {
+      id: 9,
+      category: "fashion",
+      image: "/GYPSY/GYPSY 1.jpg",
+      title: "Runway Collection 2024",
+      description: "Paris Fashion Week - Haute Couture",
+    },
+    {
+      id: 10,
+      category: "commercial",
+      image: "/GO CRZY/GO CRZY ARMLESS 2.jpg",
+      title: "Luxury Brand Campaign",
+      description:
+        "Global advertising campaign for premium lifestyle brand",
+    },
+    {
+      id: 11,
+      category: "editorial",
+      image: "/TRANCE/TRANCE 3.jpg",
+      title: "Vogue Editorial",
+      description:
+        "Featured editorial spread in international fashion magazine",
+    },
+    {
+      id: 12,
+      category: "videos",
+      image: "/VIDS/VIDEO SHOOT 1.mp4",
+      title: "Beauty Campaign",
+      description: "Cosmetics brand beauty photography",
+    },
+    // {
+    //   id: 13,
+    //   category: "fashion",
+    //   image: "/TRANCE/TRANCE 3.jpg",
+    //   title: "Runway Collection 2024",
+    //   description: "Paris Fashion Week - Haute Couture",
+    // },
+    // {
+    //   id: 14,
+    //   category: "commercial",
+    //   image: "/PERS FIT/PERS FIT PIC 2.jpg",
+    //   title: "Luxury Brand Campaign",
+    //   description:
+    //     "Global advertising campaign for premium lifestyle brand",
+    // },
+    // {
+    //   id: 15,
+    //   category: "editorial",
+    //   image: "/POLAROIDS/POLAROIDS PIC 1.jpg",
+    //   title: "Vogue Editorial",
+    //   description:
+    //     "Featured editorial spread in international fashion magazine",
+    // },
   ];
 
-  const filteredItems = activeFilter === 'all' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeFilter);
+  const filteredItems =
+    activeFilter === "all"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeFilter);
 
   return (
     <section id="portfolio" className="py-20 bg-background">
       <div className="container mx-auto px-6">
+        {/* Section Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -107,7 +165,8 @@ const PortfolioSection = () => {
           </h2>
           <div className="w-24 h-0.5 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A curated selection of my work across fashion, commercial, editorial, and beauty photography.
+            A curated selection of my work across fashion, commercial,
+            editorial, and video photography.
           </p>
         </motion.div>
 
@@ -149,16 +208,22 @@ const PortfolioSection = () => {
                 onClick={() => setSelectedImage(item)}
                 whileHover={{ y: -10 }}
               >
-                {/* <ImageWithFallback
+                {/* ✅ Added next/image for optimization */}
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                /> */}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-center text-white p-4">
                     <ZoomIn size={24} className="mx-auto mb-2" />
-                    <h3 className="text-lg font-medium mb-1">{item.title}</h3>
-                    <p className="text-sm text-white/80">{item.description}</p>
+                    <h3 className="text-lg font-medium mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-white/80">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -180,13 +245,20 @@ const PortfolioSection = () => {
               >
                 <X size={20} />
               </Button>
-              {/* <ImageWithFallback
+
+              {/* ✅ Modal image */}
+              <Image
                 src={selectedImage.image}
                 alt={selectedImage.title}
+                width={1200}
+                height={800}
                 className="w-full h-auto rounded-lg"
-              /> */}
+              />
+
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
-                <h3 className="text-2xl font-medium mb-2">{selectedImage.title}</h3>
+                <h3 className="text-2xl font-medium mb-2">
+                  {selectedImage.title}
+                </h3>
                 <p className="text-white/80">{selectedImage.description}</p>
               </div>
             </div>

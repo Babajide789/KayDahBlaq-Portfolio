@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 import { Award, MapPin, Camera, Users } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
+import Image from "next/image";
 // import { ImageWithFallback } from './figma/ImageWithFallback';
 
 
 const AboutSection = () => {
   const stats = [
-    { icon: Camera, number: '200+', label: 'Photoshoots' },
-    { icon: Award, number: '50+', label: 'Campaigns' },
+    { icon: Camera, number: '100+', label: 'Photoshoots' },
+    { icon: Award, number: '10+', label: 'Campaigns' },
     { icon: MapPin, number: '25+', label: 'Countries' },
     { icon: Users, number: '2M+', label: 'Followers' }
   ];
@@ -52,6 +53,13 @@ const AboutSection = () => {
                 alt="Alexandra Hayes Portrait"
                 className="w-full h-[600px] object-cover"
               /> */}
+              <Image
+                src="/TRANCE/TRANCE 2.jpg"
+                alt="ABOUT PHOTO"
+                className="w-full h-[600px] object-cover"
+                width={50}
+                height={100}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
           </motion.div>
