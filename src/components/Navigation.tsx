@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Menu, X } from 'lucide-react';
-import { FaTiktok, FaInstagram } from "react-icons/fa"; // Font Awesome icons
+import { FaTiktok, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 import { Button } from './ui/button';

@@ -1,7 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Instagram, Twitter, Facebook, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+
+import { FaTiktok, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -41,22 +45,28 @@ const ContactSection = () => {
 
   const socialLinks = [
     {
-      icon: Instagram,
+      icon: FaInstagram,
       label: 'Instagram',
-      href: '#',
-      followers: '1.2M'
+      href:"https://www.instagram.com/kaydahblaq_?igsh=MXEwaGJ3bjRxZnQxeg==",
+      target:"_blank",
+      rel:"noopener noreferrer",
+      
     },
     {
-      icon: Twitter,
-      label: 'Twitter',
-      href: '#',
-      followers: '450K'
+      icon: FaXTwitter,
+      label: 'X',
+      href: "https://x.com/kaydahblaq999?s=21",
+      target:"_blank",
+      rel:"noopener noreferrer",
+      
     },
     {
-      icon: Facebook,
-      label: 'Facebook',
-      href: '#',
-      followers: '320K'
+      icon: FaTiktok,
+      label: 'TikTok',
+      href: "https://www.tiktok.com/@kaydahblaq?_t=ZS-90VwC7hdwR8&_r=1",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      
     }
   ];
 
@@ -223,7 +233,6 @@ const ContactSection = () => {
                         </div>
                         <div>
                           <div className="font-medium">{social.label}</div>
-                          <div className="text-sm text-muted-foreground">{social.followers} followers</div>
                         </div>
                       </div>
                       <motion.div
