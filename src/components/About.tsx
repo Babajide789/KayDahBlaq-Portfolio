@@ -9,9 +9,9 @@ import Image from "next/image";
 const AboutSection = () => {
   const stats = [
     { icon: Camera, number: '100+', label: 'Photoshoots' },
-    { icon: Award, number: '10+', label: 'Campaigns' },
-    { icon: MapPin, number: '25+', label: 'Countries' },
-    { icon: Users, number: '2M+', label: 'Followers' }
+    { icon: Award, number: '20+', label: 'Campaigns' },
+    // { icon: MapPin, number: '25+', label: 'Countries' },
+    { icon: Users, number: '1K+', label: 'Followers' }
   ];
 
   const achievements = [
@@ -136,7 +136,7 @@ const AboutSection = () => {
                     >
                       <IconComponent className="w-6 h-6 text-primary" />
                     </motion.div>
-                    
+
                     <div>
                       <motion.div
                         className="text-3xl font-light text-primary mb-1"
