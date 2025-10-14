@@ -42,6 +42,7 @@ const HeroSection = () => {
           >
             KAYDAH
           </motion.h1>
+          
           <motion.h2
             className="text-3xl md:text-5xl font-light mb-6 tracking-widest"
             initial={{ opacity: 0, y: 30 }}
@@ -50,12 +51,14 @@ const HeroSection = () => {
           >
             BLAQ
           </motion.h2>
+
           <motion.div
             className="w-24 h-0.5 bg-white mx-auto mb-8"
             initial={{ width: 0 }}
             animate={{ width: 96 }}
             transition={{ duration: 1, delay: 1.2 }}
           ></motion.div>
+
           <motion.p
             className="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
@@ -64,6 +67,7 @@ const HeroSection = () => {
           >
             INTERNATIONAL MODEL & INFLUENCER
           </motion.p>
+
           <motion.p
             className="text-base md:text-lg text-white/80 max-w-lg mx-auto"
             initial={{ opacity: 0, y: 30 }}
