@@ -49,7 +49,7 @@ const AboutSection = () => {
           >
             <div className="relative overflow-hidden rounded-lg">
               <Image
-                src="/TRANCE/TRANCE 3.jpg"
+                src="/trance/trance-3.jpg"
                 alt="ABOUT PHOTO"
                 width={1080}
                 height={720}
