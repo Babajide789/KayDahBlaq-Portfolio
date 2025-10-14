@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
-import { Award, MapPin, Camera, Users } from 'lucide-react';
+import { Award, Camera, Users } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import Image from "next/image";
 
