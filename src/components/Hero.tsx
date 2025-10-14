@@ -17,8 +17,8 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/polaroids/POLAROIDS PIC 4.jpg"
-          alt="Kaydah Blaq Poloaroid Pic"
+          src="/polaroids/polaroids-pic-8.jpg"
+          alt="Kaydah Blaq Polaroid Pic"
           className="w-full h-full object-cover"
           fill
           priority
