@@ -28,12 +28,11 @@ const PortfolioSection = () => {
     { id: "videos", label: "Videos" },
   ];
 
-  // ✅ all paths use `image` instead of `src`
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
       category: "fashion",
-      image: "/polaroids/POLAROIDS PIC 4.jpg",
+      image: "/polaroids/polaroids-pic-4.jpg",
       title: "Runway Collection 2024",
       description: "Paris Fashion Week - Haute Couture",
       type: "image",
@@ -41,7 +40,7 @@ const PortfolioSection = () => {
     {
       id: 2,
       category: "commercial",
-      image: "/NARC/NARC PHOTO 1.jpg",
+      image: "/narc/narc-photo-1.jpg",
       title: "Luxury Brand Campaign",
       description:
         "Global advertising campaign for premium lifestyle brand",
@@ -50,7 +49,7 @@ const PortfolioSection = () => {
     {
       id: 3,
       category: "editorial",
-      image: "/GO CRZY/GO CRZY GREEN 1.jpg",
+      image: "/go-crzy/go-crzy-green-1.jpg",
       title: "Vogue Editorial",
       description:
         "Featured editorial spread in international fashion magazine",
@@ -59,7 +58,7 @@ const PortfolioSection = () => {
     {
       id: 4,
       category: "fashion",
-      image:"/NARC/NARC CAP 2.jpg",
+      image:"/narc/narc-cap-2.jpg",
       title: "Beauty Campaign",
       description: "Cosmetics brand beauty photography",
       type: "image",
@@ -67,7 +66,7 @@ const PortfolioSection = () => {
     {
       id: 5,
       category: "fashion",
-      image: "/PERS FIT/PERS FIT PIC 2.jpg",
+      image: "/pers-fit/pers-fit-pic-2.jpg",
       title: "Luxury Fashion",
       description:
         "High-end fashion photography for designer collection",
@@ -76,7 +75,7 @@ const PortfolioSection = () => {
     {
       id: 6,
       category: "commercial",
-      image: "/GYPSY/GYPSY 1.jpg",
+      image: "/gypsy/gypsy-1.jpg",
       title: "Studio Campaign",
       description: "Professional studio photography for brand campaign",
       type: "image",
@@ -84,17 +83,16 @@ const PortfolioSection = () => {
     {
       id: 7,
       category: "editorial",
-      image: "/de loca/DE LOCA 2.jpg",
+      image: "/de-loca/de-loca-2.jpg",
       title: "Fashion Portrait",
       description:
         "Editorial portrait for fashion magazine feature",
-
       type: "image",
     },
     {
       id: 8,
       category: "videos",
-      image: "/VIDS/VIDEO SHOOT 2.mp4",
+      image: "/vids/video-shoot-2.mp4",
       title: "Classic Beauty",
       description: "Timeless black and white beauty photography",
       type: "video",
@@ -102,7 +100,7 @@ const PortfolioSection = () => {
     {
       id: 9,
       category: "fashion",
-      image: "/NARC/NARC PHOTO 4.jpg",
+      image: "/narc/narc-photo-4.jpg",
       title: "Runway Collection 2024",
       description: "Paris Fashion Week - Haute Couture",
       type: "image",
@@ -110,7 +108,7 @@ const PortfolioSection = () => {
     {
       id: 10,
       category: "commercial",
-      image: "/GO CRZY/GO CRZY ARMLESS 2.jpg",
+      image: "/go-crzy/go-crzy-armless-2.jpg",
       title: "Luxury Brand Campaign",
       description:
         "Global advertising campaign for premium lifestyle brand",
@@ -119,7 +117,7 @@ const PortfolioSection = () => {
     {
       id: 11,
       category: "editorial",
-      image: "/TRANCE/TRANCE 2.jpg",
+      image: "/trance/trance-2.jpg",
       title: "Vogue Editorial",
       description:
         "Featured editorial spread in international fashion magazine",
@@ -128,7 +126,7 @@ const PortfolioSection = () => {
     {
       id: 12,
       category: "videos",
-      image: "/VIDS/VIDEO SHOOT 1.mp4",
+      image: "/vids/video-shoot-1.mp4",
       title: "Beauty Campaign",
       description: "Cosmetics brand beauty photography",
       type: "video",
