@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from 'lucide-react';
 import Image from 'next/image';
+import polaroidImage from '/public/polaroids/polaroids-pic-8.jpg';
+
 
 const HeroSection = () => {
   const scrollToPortfolio = () => {
@@ -17,7 +19,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/polaroids/polaroids-pic-8.jpg"
+          src={polaroidImage}
           alt="Kaydah Blaq Polaroid Pic"
           className="w-full h-full object-cover"
           fill
