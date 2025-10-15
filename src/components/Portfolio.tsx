@@ -10,7 +10,7 @@ import Image from "next/image";
 type PortfolioItem = {
   id: number;
   category: "fashion" | "commercial" | "editorial" | "videos";
-  image: string; // ✅ fixed (previously src)
+  image: string;
   title: string;
   description: string;
   type: "image" | "video";
