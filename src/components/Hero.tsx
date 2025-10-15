@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from 'lucide-react';
 import Image from 'next/image';
-import polaroidImage from '../public/polaroids/polaroids-pic-1.jpg';
+import polaroidImage from '/polaroids/polaroids-pic-8.jpg';
 
 
 const HeroSection = () => {
