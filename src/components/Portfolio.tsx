@@ -32,7 +32,7 @@ const PortfolioSection = () => {
     {
       id: 1,
       category: "fashion",
-      image: "/polaroids/polaroids-pic-4.jpg",
+      image: "/porfolio-pic-4.jpg",
       title: "Runway Collection 2024",
       description: "Paris Fashion Week - Haute Couture",
       type: "image",
