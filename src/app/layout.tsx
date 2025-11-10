@@ -36,11 +36,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KayDahBlaq | International Fashion & Brand Model Portfolio",
     description: "Discover KayDahBlaq's modeling work across fashion, commercial, editorial, and video projects with top global brands.",
-    url: "https://yourportfolio.com", // replace with actual portfolio URL
+    url: "https://kay-dah-blaq-portfolio.vercel.app/",
     siteName: "KayDahBlaq Portfolio",
     images: [
       {
-        url: "https://yourportfolio.com/hero-pic-8.jpg", // use your hero section image
+        url: "https://kay-dah-blaq-portfolio.vercel.app/hero-pic-8.jpg",
         width: 1200,
         height: 630,
         alt: "KayDahBlaq Model Portfolio Thumbnail",
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "KayDahBlaq | International Fashion & Brand Model Portfolio",
     description: "Explore the portfolio of KayDahBlaq, featured in top fashion campaigns, runway shows, editorial spreads, and more.",
-    images: ["https://yourportfolio.com/hero-pic-8.jpg"], // hero section image
-    creator: "@KayDahBlaq", // optional Twitter handle
+    images: ["https://kay-dah-blaq-portfolio.vercel.app/hero-pic-8.jpg"],
+    creator: "@KayDahBlaq",
   },
 };
 
