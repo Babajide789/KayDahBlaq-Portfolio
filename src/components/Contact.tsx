@@ -79,7 +79,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    // FORM SUBMISSION
     toast.success('Message sent successfully! I\'ll get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
